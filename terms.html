@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Castello</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#F7F8FC;--surface:#FFFFFF;--primary:#1E293B;--text:#334155;--muted:#64748B;--accent:#4338CA;--accent-light:#EEF2FF;--accent-mid:#6366F1;--border:#E2E8F0;--radius:12px;--radius-lg:20px}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--primary);line-height:1.15}
+a{text-decoration:none;color:inherit}
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,248,252,0.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+nav.scrolled{box-shadow:0 1px 12px rgba(0,0,0,0.06)}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.4rem;color:var(--accent);display:flex;align-items:center;gap:8px;letter-spacing:-0.02em}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:0.9rem;font-weight:500;color:var(--muted);transition:color 0.2s}
+.nav-links a:hover{color:var(--primary)}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:0.95rem;border:none;cursor:pointer;border-radius:10px;transition:all 0.25s}
+.btn-primary{background:var(--accent);color:#fff;padding:12px 28px;box-shadow:0 2px 12px rgba(67,56,202,0.25)}
+.btn-primary:hover{background:var(--accent-mid);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--primary);border-radius:2px}
+.page-content{padding:130px 0 80px}
+.page-content .container{max-width:780px}
+.page-content h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:12px}
+.page-content .subtitle{font-size:1.05rem;color:var(--muted);margin-bottom:48px;line-height:1.7}
+.page-content h2{font-size:1.3rem;font-weight:700;margin:40px 0 12px}
+.page-content h3{font-size:1.1rem;font-weight:700;margin:28px 0 10px}
+.page-content p{margin-bottom:16px;line-height:1.75}
+.page-content ul{margin:0 0 16px 20px;line-height:1.75}
+.page-content li{margin-bottom:6px}
+footer{background:var(--surface);border-top:1px solid var(--border);padding:48px 0 32px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand .logo{margin-bottom:12px}
+.footer-brand p{font-size:0.88rem;color:var(--muted);line-height:1.65;max-width:280px}
+.footer-col h4{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--primary);margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col a{font-size:0.88rem;color:var(--muted);transition:color 0.2s}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:0.82rem;color:var(--muted)}
+@media(max-width:680px){
+.nav-links{display:none}.hamburger{display:flex}
+.nav-links.open{display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--border);padding:24px;gap:20px;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.container{padding:0 20px}.page-content{padding:110px 0 60px}
+.footer-grid{grid-template-columns:1fr;gap:28px}
+.footer-bottom{flex-direction:column;gap:12px;text-align:center}
+}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="container">
+<a href="index.html" class="logo"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2L4 8v12l10 6 10-6V8L14 2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 8l-5 3v6l5 3 5-3v-6l-5-3z" fill="currentColor" opacity="0.15"/><path d="M14 8l-5 3v6l5 3 5-3v-6l-5-3z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>Castello</a>
+<ul class="nav-links" id="navLinks"><li><a href="index.html#how">How It Works</a></li><li><a href="index.html#features">Features</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="contact.html" class="btn btn-primary" style="padding:10px 22px;font-size:0.88rem;">Get in Touch</a></li></ul>
+<button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="page-content"><div class="container">
+<h1>Terms of Service</h1>
+<p class="subtitle">Last updated: July 2026</p>
+
+<p>These Terms of Service ("Terms") govern your use of the Castello website and services ("Services") operated by Castello ("we", "us", "our"). By accessing or using our Services, you agree to be bound by these Terms.</p>
+
+<h2>1. Services</h2>
+<p>Castello provides content protection services, including automated scanning, DMCA takedown notice filing, search engine delisting requests, and deepfake detection. Our Services are designed to assist content creators in protecting their intellectual property online.</p>
+
+<h2>2. Eligibility</h2>
+<p>You must be at least 18 years old to use our Services. By using our Services, you represent that you are of legal age and have the authority to enter into these Terms.</p>
+
+<h2>3. Account Responsibilities</h2>
+<p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to provide accurate, current, and complete information when creating your account and to update this information as necessary.</p>
+
+<h2>4. Acceptable Use</h2>
+<p>You agree to use our Services only for lawful purposes. You may only submit takedown requests for content that you own or are authorised to act on behalf of the rights holder. Filing false or fraudulent DMCA claims is prohibited and may result in legal liability.</p>
+
+<h2>5. Intellectual Property</h2>
+<p>All content, features, and functionality of the Castello website and platform are owned by Castello and protected by intellectual property laws. You may not copy, modify, distribute, or reverse-engineer any part of our Services.</p>
+
+<h2>6. Payment and Billing</h2>
+<p>Paid plans are billed on a monthly basis. All fees are non-refundable unless otherwise stated. We reserve the right to change pricing with 30 days' notice. You may cancel your subscription at any time through your dashboard.</p>
+
+<h2>7. Limitation of Liability</h2>
+<p>Castello provides content protection on a best-effort basis. While we strive for high takedown success rates, we cannot guarantee the removal of all infringing content. We are not liable for any indirect, incidental, or consequential damages arising from use of our Services.</p>
+
+<h2>8. Disclaimer</h2>
+<p>Our Services are provided "as is" without warranties of any kind, express or implied. We do not warrant that our Services will be uninterrupted, error-free, or that all infringing content will be successfully removed.</p>
+
+<h2>9. Termination</h2>
+<p>We may suspend or terminate your access to our Services at any time for violation of these Terms or for any other reason at our discretion. You may terminate your account at any time by contacting us.</p>
+
+<h2>10. Governing Law</h2>
+<p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Castello operates, without regard to conflict of law principles.</p>
+
+<h2>11. Changes to Terms</h2>
+<p>We reserve the right to update these Terms at any time. We will notify you of material changes by posting the updated Terms on our website. Continued use of our Services after changes constitutes acceptance of the revised Terms.</p>
+
+<h2>12. Contact</h2>
+<p>If you have questions about these Terms, please <a href="contact.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">contact us</a>.</p>
+</div></section>
+
+<footer><div class="container">
+<div class="footer-grid">
+<div class="footer-brand"><a href="index.html" class="logo"><svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M14 2L4 8v12l10 6 10-6V8L14 2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 8l-5 3v6l5 3 5-3v-6l-5-3z" fill="currentColor" opacity="0.15"/><path d="M14 8l-5 3v6l5 3 5-3v-6l-5-3z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>Castello</a><p>AI-powered content protection for creators. Your work, your revenue, your control.</p></div>
+<div class="footer-col"><h4>Product</h4><ul><li><a href="index.html#features">Features</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div>
+<div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div class="footer-col"><h4>Legal</h4><ul><li><a href="terms.html">Terms of Service</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="dmca.html">DMCA Policy</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>&copy; 2026 Castello. All rights reserved.</span><span>Built for creators, by creators.</span></div>
+</div></footer>
+<script>
+document.getElementById('hamburger').addEventListener('click',()=>{document.getElementById('navLinks').classList.toggle('open')});
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open')})});
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>10)});
+</script>
+</body></html>

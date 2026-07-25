@@ -1,0 +1,9 @@
+# Tells Netlify where your site files and functions live.
+# No need to edit this file.
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
