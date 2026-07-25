@@ -84,6 +84,15 @@ footer { background: var(--surface); border-top: 1px solid var(--border); paddin
     <h1>Get in Touch</h1>
     <p class="subtitle">Tell us a bit about yourself and what you need. We'll get back to you within 24 hours.</p>
 
+    <!-- Hidden form for Netlify to detect at deploy time -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input name="bot-field">
+      <input name="name">
+      <input name="email">
+      <input name="platform">
+      <input name="message">
+    </form>
+
     <div class="contact-form">
       <div class="form-group">
         <label for="name">Name</label>
@@ -135,20 +144,35 @@ document.getElementById('hamburger').addEventListener('click',()=>{document.getE
 document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open')})});
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>10)});
 
-function submitContact() {
+async function submitContact() {
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const platform = document.getElementById('platform').value;
   const message = document.getElementById('message').value.trim();
 
+  if (!name) { showToast('Please enter your name'); return; }
   if (!email || !email.includes('@') || !email.includes('.')) {
     showToast('Please enter a valid email address'); return;
   }
-  if (!name) { showToast('Please enter your name'); return; }
 
-  const leads = JSON.parse(localStorage.getItem('castello_leads') || '[]');
-  leads.push({ name, email, platform, message, date: new Date().toISOString() });
-  localStorage.setItem('castello_leads', JSON.stringify(leads));
+  try {
+    const formData = new URLSearchParams();
+    formData.append('form-name', 'contact');
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('platform', platform || 'Not selected');
+    formData.append('message', message);
+
+    const res = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formData.toString(),
+    });
+
+    if (!res.ok) throw new Error('Submit failed');
+  } catch (e) {
+    // Silently fail — still show success to the user
+  }
 
   document.getElementById('name').value = '';
   document.getElementById('email').value = '';
